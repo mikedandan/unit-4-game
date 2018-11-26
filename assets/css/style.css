@@ -1,12 +1,29 @@
+body {
+    background-image: url('../images/High-Resolution-Crystal-Wallpaper.jpg');
+    opacity: .95;
+}
 .row {
     margin-bottom: 25px;
 }
 .jumbotron {
+    background-color: #C6CCD1;
     text-align: center;
 }
+h1 {
+    letter-spacing: 4px;
+}
 .card-body {
+    border-color: black;
     text-align: center;
 }
 .card-header {
+    background-color: #83888C;
+    color: white;
     text-align: center;
+}
+.card-footer {
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+    background-color: #0069D9;
 }
