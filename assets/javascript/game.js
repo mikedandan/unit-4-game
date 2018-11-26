@@ -1,5 +1,19 @@
 $(document).ready(function () {
 
+    // Audio Setup
+    // ===========
+
+    // Create an audio element with JavaScript
+    var audioElement = document.createElement("audio");
+
+    // Set it's source to the location
+    audioElement.setAttribute("src", "./assets/music/Pacman_Introduction_Music.mp3");
+
+    // Theme song Button
+    $(".btn").on("click", function () {
+        audioElement.play();
+    });
+
 
     //function to show random number at start of game (between 19-120)
     var randomNumber = Math.floor(Math.random() * 100) + 19;
