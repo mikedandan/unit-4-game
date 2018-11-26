@@ -1,38 +1,40 @@
 $(document).ready(function () {
 
-    // Variables
-    var wins = 0;
-    var losses = 0;
-    var totalScore = 0;
+
     //function to show random number at start of game (between 19-120)
     var randomNumber = Math.floor(Math.random() * 100) + 19;
     //display random number in html    
     $(".random-number").text(randomNumber);
 
     //set hidden random number for each crystal at start of game (1-12)
-    var greenCrystal = Math.floor(Math.random() * 12 + 1);
+    var greenCrystal = Math.floor(Math.random() * 12) + 1;
     // $("#green").on("click", function () {
 
     //     console.log($(greenCrystal))
     // })
 
-    var redCrystal = Math.floor(Math.random() * 12 + 1);
+    var redCrystal = Math.floor(Math.random() * 12) + 1;
     // $("#red").on("click", function () {
 
     //     console.log($(redCrystal))
     // })
 
-    var purpleCrystal = Math.floor(Math.random() * 12 + 1);
+    var purpleCrystal = Math.floor(Math.random() * 12) + 1;
     // $("#purple").on("click", function () {
 
     //     console.log($(purpleCrystal))
     // })
 
-    var blueCrystal = Math.floor(Math.random() * 12 + 1);
+    var blueCrystal = Math.floor(Math.random() * 12) + 1;
     // $("#blue").on("click", function () {
 
     //     console.log($(blueCrystal))
     // })
+
+    // Variables
+    var wins = 0;
+    var losses = 0;
+    var totalScore = 0;
 
     //tracking of wins, losses and total
     $(".total-wins").text(wins);
@@ -40,13 +42,13 @@ $(document).ready(function () {
 
     //User Score set to 0 reset game
     function reset() {
-        var randomNumber = Math.floor(Math.random() * 100) + 19;
+        randomNumber = Math.floor(Math.random() * 100) + 19;
         console.log(randomNumber)
         $(".random-number").text(randomNumber);
-        greenCrystal = Math.floor(Math.random() * 12 + 1);
-        redCrystal = Math.floor(Math.random() * 12 + 1);
-        purpleCrystal = Math.floor(Math.random() * 12 + 1);
-        blueCrystal = Math.floor(Math.random() * 12 + 1);
+        greenCrystal = Math.floor(Math.random() * 12) + 1;
+        redCrystal = Math.floor(Math.random() * 12) + 1;
+        purpleCrystal = Math.floor(Math.random() * 12) + 1;
+        blueCrystal = Math.floor(Math.random() * 12) + 1;
         totalScore = 0;
         $(".total-score").text(totalScore);
     }
@@ -69,7 +71,7 @@ $(document).ready(function () {
     //when each crystal is clicked, add that amount to total score
     $("#green").on('click', function () {
         totalScore = totalScore + greenCrystal;
-        console.log("New Total Score= " + totalScore);
+        console.log("Total Score= " + totalScore);
         $(".total-score").text(totalScore);
         if (totalScore == randomNumber) {
             winner();
@@ -81,7 +83,7 @@ $(document).ready(function () {
 
     $("#red").on('click', function () {
         totalScore = totalScore + redCrystal;
-        console.log("New Total Score= " + totalScore);
+        console.log("Total Score= " + totalScore);
         $(".total-score").text(totalScore);
         if (totalScore == randomNumber) {
             winner();
@@ -93,7 +95,7 @@ $(document).ready(function () {
 
     $("#purple").on('click', function () {
         totalScore = totalScore + purpleCrystal;
-        console.log("New Total Score= " + totalScore);
+        console.log("Total Score= " + totalScore);
         $(".total-score").text(totalScore);
         if (totalScore == randomNumber) {
             winner();
@@ -105,7 +107,7 @@ $(document).ready(function () {
 
     $("#blue").on('click', function () {
         totalScore = totalScore + blueCrystal;
-        console.log("New Total Score= " + totalScore);
+        console.log("Total Score= " + totalScore);
         $(".total-score").text(totalScore);
         if (totalScore == randomNumber) {
             winner();
